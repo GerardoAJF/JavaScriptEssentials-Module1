@@ -17,7 +17,7 @@ const images = {
         return (images.list.filter(img => {
             // Filtramos la lista de acuerdo a su titulo
             return img.title == title
-        })).length === 0 ? false : true;
+        })).length !== 0
     },
     "show": () => {
         // Iteramos cada objeto de la lista y lo imprimimos en consola

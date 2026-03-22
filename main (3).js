@@ -17,7 +17,7 @@ const images = {
         return (images.list.filter(img => {
             // Filtramos la lista de acuerdo a su titulo
             return img.title == title
-        })).length === 0 ? false : true;
+        })).length !== 0;
     },
     "show": () => {
         // Iteramos cada objeto de la lista y lo imprimimos en consola
@@ -32,11 +32,10 @@ const images = {
     "edit": (title, artist, date) => {
         // Iteramos cada imágen de la lista
         images.list.forEach(img => {
-            // Cuando encontramos la imágen la modificamos y terminamos el programa
+            // Cuando encontramos la imágen la modificamos
             if (img.title == title) {
                 img.artist = artist
                 img.date = date
-                return
             }
         });
     },
